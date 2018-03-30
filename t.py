@@ -21,8 +21,6 @@ def handle(msg):
         print ('%s => %s' % (chat_id, command))
 
         
-        conn = sqlite3.connect('db.sqlite')
-        cursor = conn.cursor()
 
         if  '/city9' == command:
             if i==1:
@@ -50,8 +48,6 @@ def handle(msg):
             bot.sendMessage(chat_id, lastorder)
         else:
             bot.sendMessage(chat_id, main)
-
-        conn.close()
 
 bot = telepot.Bot('510251977:AAGAepSEbiDDhXVd3ImRp8T1c8j6bSTm9dM')
 
